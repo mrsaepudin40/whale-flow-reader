@@ -1,0 +1,91 @@
+{
+  "asset": "BTC",
+  "assets": [
+    "BTC"
+  ],
+  "window": {
+    "end": "2026-11-19T00:00:00Z",
+    "start": "2026-11-18T00:00:00Z"
+  },
+  "window_hours": 24.0,
+  "sources": [
+    "Example exchange-flow provider"
+  ],
+  "inflow_usd": 42400000,
+  "outflow_usd": 118600000,
+  "net_flow_usd": 76200000,
+  "total_flow_usd": 161000000,
+  "net_flow_pct_of_total": 47.33,
+  "lean": "accumulation",
+  "neutral_band_pct": 5.0,
+  "per_asset": {
+    "BTC": {
+      "inflow_usd": 42400000,
+      "outflow_usd": 118600000,
+      "net_flow_usd": 76200000,
+      "total_flow_usd": 161000000,
+      "net_flow_pct_of_total": 47.33,
+      "transfer_count": 9,
+      "lean": "accumulation"
+    }
+  },
+  "baseline_net_flow_usd": 40000000,
+  "baseline_change_pct": 90.5,
+  "large_transfer_threshold_usd": 1000000,
+  "large_transfers": [
+    {
+      "direction": "out",
+      "amount_usd": 50000000,
+      "asset": "BTC",
+      "label": "Binance"
+    },
+    {
+      "direction": "out",
+      "amount_usd": 35000000,
+      "asset": "BTC",
+      "label": "Coinbase"
+    },
+    {
+      "direction": "in",
+      "amount_usd": 20000000,
+      "asset": "BTC",
+      "label": "Binance"
+    },
+    {
+      "direction": "out",
+      "amount_usd": 20000000,
+      "asset": "BTC",
+      "label": "Kraken"
+    },
+    {
+      "direction": "in",
+      "amount_usd": 15000000,
+      "asset": "BTC",
+      "label": "Coinbase"
+    },
+    {
+      "direction": "out",
+      "amount_usd": 13000000,
+      "asset": "BTC",
+      "label": "OKX"
+    },
+    {
+      "direction": "in",
+      "amount_usd": 7000000,
+      "asset": "BTC",
+      "label": "Kraken"
+    }
+  ],
+  "large_transfer_count": 7,
+  "flags": [
+    {
+      "code": "unlabeled_transfers",
+      "detail": "2 of 9 transfers carry no exchange label; their direction is counted but their exchange is unknown."
+    },
+    {
+      "code": "single_source",
+      "detail": "Flow comes from a single data supplier. Labels and coverage cannot be cross-checked; treat the read as one supplier's view."
+    }
+  ],
+  "note": "Flow is not price direction. Net outflow leans accumulation and net inflow leans distribution, but a large transfer is not a trade and exchange labels depend on the data supplier."
+}

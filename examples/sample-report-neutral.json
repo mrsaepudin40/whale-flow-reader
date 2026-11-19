@@ -1,0 +1,89 @@
+{
+  "asset": "SOL",
+  "assets": [
+    "SOL"
+  ],
+  "window": {
+    "end": "2026-11-19T06:00:00Z",
+    "start": "2026-11-19T00:00:00Z"
+  },
+  "window_hours": 6.0,
+  "sources": [
+    "Example exchange-flow provider"
+  ],
+  "inflow_usd": 12400000,
+  "outflow_usd": 12900000,
+  "net_flow_usd": 500000,
+  "total_flow_usd": 25300000,
+  "net_flow_pct_of_total": 1.98,
+  "lean": "neutral",
+  "neutral_band_pct": 5.0,
+  "per_asset": {
+    "SOL": {
+      "inflow_usd": 12400000,
+      "outflow_usd": 12900000,
+      "net_flow_usd": 500000,
+      "total_flow_usd": 25300000,
+      "net_flow_pct_of_total": 1.98,
+      "transfer_count": 6,
+      "lean": "neutral"
+    }
+  },
+  "baseline_net_flow_usd": null,
+  "baseline_change_pct": null,
+  "large_transfer_threshold_usd": 1000000,
+  "large_transfers": [
+    {
+      "direction": "out",
+      "amount_usd": 6900000,
+      "asset": "SOL",
+      "label": "Binance"
+    },
+    {
+      "direction": "in",
+      "amount_usd": 6200000,
+      "asset": "SOL",
+      "label": "Binance"
+    },
+    {
+      "direction": "in",
+      "amount_usd": 4800000,
+      "asset": "SOL",
+      "label": "Coinbase"
+    },
+    {
+      "direction": "out",
+      "amount_usd": 4500000,
+      "asset": "SOL",
+      "label": "Coinbase"
+    },
+    {
+      "direction": "out",
+      "amount_usd": 1500000,
+      "asset": "SOL",
+      "label": "OKX"
+    },
+    {
+      "direction": "in",
+      "amount_usd": 1400000,
+      "asset": "SOL",
+      "label": "Kraken"
+    }
+  ],
+  "large_transfer_count": 6,
+  "flags": [
+    {
+      "code": "single_source",
+      "detail": "Flow comes from a single data supplier. Labels and coverage cannot be cross-checked; treat the read as one supplier's view."
+    },
+    {
+      "code": "short_window",
+      "detail": "Window is 6 hours, under 24h. Short windows are noisy and can be dominated by one or two transfers."
+    },
+    {
+      "code": "no_baseline",
+      "detail": "No baseline net flow was supplied, so no versus-baseline comparison is possible."
+    }
+  ],
+  "note": "Flow is not price direction. Net outflow leans accumulation and net inflow leans distribution, but a large transfer is not a trade and exchange labels depend on the data supplier."
+}
