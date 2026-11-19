@@ -3,6 +3,7 @@ name: whale-flow-reader
 description: Read a supplied on-chain exchange-flow snapshot — inflows, outflows, net flow, large transfers — and return a structured, checkable read: accumulation or distribution lean, flow versus baseline, and uncertainty flags. It never predicts a price.
 summary: Read exchange net flow and large transfers from supplied on-chain data and return an accumulation or distribution lean with uncertainty flags.
 version: 1.0.0
+docs_url: https://github.com/mrsaepudin40/whale-flow-reader
 tags:
   - crypto
   - whale
